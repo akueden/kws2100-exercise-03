@@ -7,7 +7,7 @@ import { Map, MapBrowserEvent, Overlay } from "ol";
 import { FeatureLike } from "ol/Feature";
 
 const source = new VectorSource({
-  url: "/kristiania-kws2100-03/geojson/schools.geojson",
+  url: "/kws2100-exercise-03/geojson/schools.geojson",
   format: new GeoJSON(),
 });
 
@@ -24,7 +24,7 @@ export function SchoolLayerCheckbox({
   map: Map;
 }) {
   const [checked, setChecked] = useState(true);
-  const overlayRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement | null>(null);
   const [selectedSchools, setSelectedSchools] = useState<FeatureLike[]>([]);
 
   function handleClick(e: MapBrowserEvent<MouseEvent>) {

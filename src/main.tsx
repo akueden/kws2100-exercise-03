@@ -16,7 +16,7 @@ const view = new View({ center: [10.8, 59.9], zoom: 10 });
 const map = new Map({ view });
 
 function Application() {
-  const mapRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<HTMLDivElement | null>(null);
   const [layers, setLayers] = useState<Layer[]>([
     new TileLayer({ source: new OSM() }),
   ]);
