@@ -7,7 +7,7 @@ import { Map, MapBrowserEvent, Overlay } from "ol";
 import { FeatureLike } from "ol/Feature";
 
 const source = new VectorSource({
-  url: "/kws2100-exercise-03/geojson/schools.geojson",
+  url: "/kristiania-kws2100-03/geojson/schools.geojson",
   format: new GeoJSON(),
 });
 
