@@ -8,6 +8,7 @@ import { useGeographic } from "ol/proj";
 import "ol/ol.css";
 import "./application.css";
 import { Layer } from "ol/layer";
+import { SchoolLayerCheckbox } from "./modules/layers/schoolLayerCheckbox";
 
 useGeographic();
 
@@ -38,6 +39,7 @@ function Application() {
     <>
       <nav>
         <button onClick={handleClick}>Center on me</button>
+        <SchoolLayerCheckbox setLayers={setLayers} map={map} />
       </nav>
       <main>
         <div ref={mapRef}></div>
